@@ -46,4 +46,10 @@ export interface Theme {
 // 其他配置
 export interface Other {
     email: string
+    }
+
+export interface EnvConfig {
+    id: string,
+    name: string,
+    value: object,
 }
