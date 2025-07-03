@@ -63,7 +63,7 @@ export default () => {
                     name="title"
                     rules={[{ required: true, message: '网站名称不能为空' }]}
                 >
-                    <Input placeholder="龙氏Thrive" />
+                    <Input placeholder="龙氏ThriveX" />
                 </Form.Item>
 
                 <Form.Item
