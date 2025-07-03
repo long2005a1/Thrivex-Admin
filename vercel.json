@@ -1,0 +1,20 @@
+{
+    "rewrites": [
+        {
+            "source": "/baidu/:path*",
+            "destination": "https://openapi.baidu.com/:path*"
+        },
+        {
+            "source": "/qiniu/:path*",
+            "destination": "https://rsf.qiniuapi.com/:path*"
+        },
+        {
+            "source": "/ai/:path*",
+            "destination": "https://spark-api-open.xf-yun.com/:path*"
+        },
+        {
+            "source": "/:path*",
+            "destination": "/index.html"
+        }
+    ]
+}
