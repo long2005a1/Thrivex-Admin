@@ -1,10 +1,13 @@
-import { useState, useEffect } from 'react';
-import { Tabs, Input, Button, Form, Spin, Empty, Card, Popconfirm, Select, message } from 'antd';
+import { useEffect, useState } from 'react';
+
+import { Button, Card, Empty, Form, Input, Popconfirm, Select, Spin, Tabs, message } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
+
 import { getLinkListAPI, addLinkDataAPI, editLinkDataAPI, delLinkDataAPI, getWebTypeListAPI } from '@/api/Web';
-import { WebType, Web } from '@/types/app/web';
 import Title from '@/components/Title';
+import { WebType, Web } from '@/types/app/web';
 import { RuleObject } from 'antd/es/form';
+
 import group from './assets/svg/group.svg';
 import './index.scss';
 
@@ -170,14 +173,7 @@ export default () => {
       children: (
         <div>
           <div className="flex justify-end w-full mb-8">
-            <Input
-              size="large"
-              placeholder="请输入网站名称或描述信息进行查询"
-              prefix={<SearchOutlined />}
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="w-[400px]"
-            />
+            <Input size="large" placeholder="请输入网站名称或描述信息进行查询" prefix={<SearchOutlined />} value={search} onChange={(e) => setSearch(e.target.value)} className="w-[400px]" />
           </div>
 
           <Spin spinning={loading}>
@@ -206,13 +202,7 @@ export default () => {
                               修改
                             </div>
 
-                            <Popconfirm
-                              title="警告"
-                              description="你确定要删除吗"
-                              okText="确定"
-                              cancelText="取消"
-                              onConfirm={() => deleteLinkData(item.id!)}
-                            >
+                            <Popconfirm title="警告" description="你确定要删除吗" okText="确定" cancelText="取消" onConfirm={() => deleteLinkData(item.id!)}>
                               <div className="delete">删除</div>
                             </Popconfirm>
                           </div>
@@ -247,11 +237,7 @@ export default () => {
                   <Input placeholder="龙氏ThriveX" />
                 </Form.Item>
 
-                <Form.Item
-                  label="网站描述"
-                  name="description"
-                  rules={[{ required: true, message: '网站描述不能为空' }]}
-                >
+                <Form.Item label="网站描述" name="description" rules={[{ required: true, message: '网站描述不能为空' }]}>
                   <Input placeholder="也许会是最好用的博客管理系统" />
                 </Form.Item>
 
@@ -263,11 +249,7 @@ export default () => {
                   <Input placeholder="https://long2024.cn/favicon.ico" />
                 </Form.Item>
 
-                <Form.Item
-                  label="网站链接"
-                  name="url"
-                  rules={[{ required: true, message: '网站链接不能为空' }, { validator: validateURL }]}
-                >
+                <Form.Item label="网站链接" name="url" rules={[{ required: true, message: '网站链接不能为空' }, { validator: validateURL }]}>
                   <Input placeholder="https://long2025.top/" />
                 </Form.Item>
 
