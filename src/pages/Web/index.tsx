@@ -252,15 +252,15 @@ export default () => {
                   name="description"
                   rules={[{ required: true, message: '网站描述不能为空' }]}
                 >
-                  <Input placeholder="记录前端、Python、Java点点滴滴" />
+                  <Input placeholder="也许会是最好用的博客管理系统" />
                 </Form.Item>
 
                 <Form.Item label="站长邮箱" name="email">
-                  <Input placeholder="3311118881@qq.com" />
+                  <Input placeholder="2190008995@qq.com" />
                 </Form.Item>
 
                 <Form.Item label="网站图标" name="image" rules={[{ required: true, message: '网站图标不能为空' }]}>
-                  <Input placeholder="https://liuyuyang.net/logo.png" />
+                  <Input placeholder="https://long2024.cn/favicon.ico" />
                 </Form.Item>
 
                 <Form.Item
@@ -268,11 +268,11 @@ export default () => {
                   name="url"
                   rules={[{ required: true, message: '网站链接不能为空' }, { validator: validateURL }]}
                 >
-                  <Input placeholder="https://liuyuyang.net/" />
+                  <Input placeholder="https://long2025.top/" />
                 </Form.Item>
 
                 <Form.Item label="订阅地址" name="rss" rules={[{ validator: validateURL }]}>
-                  <Input placeholder="https://liuyuyang.net/api/rss" />
+                  <Input placeholder="https://long2025.top/api/rss" />
                 </Form.Item>
 
                 <Form.Item name="typeId" label="网站类型" rules={[{ required: true, message: '网站类型不能为空' }]}>

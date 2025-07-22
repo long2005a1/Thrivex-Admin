@@ -174,7 +174,7 @@ export default () => {
                         </Form.Item>
 
                         <Form.Item label="图片" name="image" rules={[{ required: true, message: '轮播图地址不能为空' }]}>
-                            <Input placeholder="https://liuyuyang.net/swiper.jpg" prefix={<PictureOutlined />} addonAfter={<UploadBtn />} className="customizeAntdInputAddonAfter" />
+                            <Input placeholder="https://long2025.top/logo.png" prefix={<PictureOutlined />} addonAfter={<UploadBtn />} className="customizeAntdInputAddonAfter" />
                         </Form.Item>
 
                         <Form.Item>

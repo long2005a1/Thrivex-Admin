@@ -78,7 +78,7 @@ export default () => {
                     name="email"
                     rules={[{ required: true, message: '邮箱不能为空' }]}
                 >
-                    <Input placeholder="liuyuyang1024@yeah.net" />
+                    <Input placeholder="longsbt@er.long2024.cn" />
                 </Form.Item>
 
                 <Form.Item

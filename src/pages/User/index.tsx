@@ -275,7 +275,7 @@ export default () => {
                         label="用户名"
                         rules={[{ required: true, message: '请输入用户名' }]}
                     >
-                        <Input placeholder="liuyuyang" />
+                        <Input placeholder="Longs" />
                     </Form.Item>
 
                     <Form.Item
@@ -283,11 +283,7 @@ export default () => {
                         label="名称"
                         rules={[{ required: true, message: '请输入名称' }]}
                     >
-<<<<<<< HEAD
-                        <Input placeholder='龙氏' />
-=======
-                        <Input placeholder="宇阳" />
->>>>>>> e8a6380 (引入 Eslint，提高项目代码规范)
+                        <Input placeholder="龙氏" />
                     </Form.Item>
 
                     <Form.Item
@@ -295,7 +291,7 @@ export default () => {
                         label="邮箱"
                         rules={[{ type: 'email', message: '请输入有效的邮箱' }]}
                     >
-                        <Input placeholder="3311118881@qq.com" />
+                        <Input placeholder="2190008995@qq.com" />
                     </Form.Item>
 
                     <Form.Item
@@ -303,7 +299,7 @@ export default () => {
                         label="头像链接"
                         rules={[{ type: 'url', message: '请输入有效的头像地址' }]}
                     >
-                        <Input placeholder="https://res.liuyuyang.net/usr/images/avatar.jpg" />
+                        <Input placeholder="https://long2024.cn/favicon.ico" />
                     </Form.Item>
 
                     <Form.Item
