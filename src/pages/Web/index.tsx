@@ -77,153 +77,10 @@ export default () => {
         if (!acc[groupName]) {
           acc[groupName] = [];
         }
-<<<<<<< HEAD
-    };
-
-    const { Option } = Select;
-
-    const handleTabChange = (key: string) => {
-        setTab(key);
-        reset()
-    };
-
-    const toHref = (url: string) => {
-        window.open(url, '_blank');
-    };
-
-    const tabItems = [
-        {
-            label: '网站列表',
-            key: 'list',
-            children: (
-                <div>
-                    <div className="flex justify-end w-full mb-8">
-                        <Input
-                            size="large"
-                            placeholder="请输入网站名称或描述信息进行查询"
-                            prefix={<SearchOutlined />}
-                            value={search}
-                            onChange={e => setSearch(e.target.value)}
-                            className='w-[400px]'
-                        />
-                    </div>
-
-                    <Spin spinning={loading}>
-                        <div className='space-y-8'>
-                            {
-                                Object.keys(list).map((key, index1) => (
-                                    <div key={index1}>
-                                        <Card className="[&>.ant-card-body]:flex [&>.ant-card-body]:py-2 [&>.ant-card-body]:px-4 my-2 ml-1.5 text-base bg-[#f5f6ff] dark:bg-boxdark transition-colors">
-                                            <img src={group} alt="分组图标" className='w-6 h-6 mr-2' />
-                                            <span>{key}</span>
-                                        </Card>
-
-                                        {
-                                            Object.values(list[key]).length ? (
-                                                <div className="list">
-                                                    {
-                                                        Object.values(list[key]).map((item, index2) => (
-                                                            <div key={index2} className="item">
-                                                                <div className="avatar">
-                                                                    <img src={item.image} alt="" className="avatar-img" />
-                                                                </div>
-
-                                                                <div className="name">{item.title}</div>
-                                                                <div className="description">{item.description}</div>
-                                                                <div className="type">{item.type.name}</div>
-
-                                                                <div className="operate">
-                                                                    <div onClick={() => editLinkData(item)} className="edit">修改</div>
-
-                                                                    <Popconfirm title="警告" description="你确定要删除吗" okText="确定" cancelText="取消" onConfirm={() => deleteLinkData(item.id!)}>
-                                                                        <div className="delete">删除</div>
-                                                                    </Popconfirm>
-                                                                </div>
-
-                                                                <div onClick={() => toHref(item.url)} className="headFor">前往该网站 &rarr;</div>
-                                                            </div>
-                                                        ))
-                                                    }
-                                                </div>
-                                            ) : <Empty description="暂无数据" className='my-7' />
-                                        }
-                                    </div>
-                                ))
-                            }
-                        </div>
-                    </Spin>
-                </div>
-            ),
-        },
-        {
-            label: isMethod === "edit" ? '编辑网站' : '新增网站',
-            key: 'operate',
-            children: (
-                <div>
-                    <h2 className="text-xl pb-4 text-center">{isMethod === "edit" ? '编辑网站' : '新增网站'}</h2>
-
-                    <Spin spinning={editLoading}>
-                        <div className='w-full md:w-[500px] mx-auto'>
-                            <Form form={form} layout="vertical" size='large' initialValues={link} onFinish={onSubmit}>
-                                <Form.Item label="网站标题" name="title" rules={[{ required: true, message: '网站标题不能为空' }]}>
-                                    <Input placeholder="龙氏ThriveX" />
-                                </Form.Item>
-
-                                <Form.Item label="网站描述" name="description" rules={[{ required: true, message: '网站描述不能为空' }]}>
-                                    <Input placeholder="记录生活，分享故事" />
-                                </Form.Item>
-
-                                <Form.Item label="站长邮箱" name="email">
-                                    <Input placeholder="longbt@er.long2024.cn" />
-                                </Form.Item>
-
-                                <Form.Item label="网站图标" name="image" rules={[{ required: true, message: '网站图标不能为空' }]}>
-                                    <Input placeholder="https://long2025.top/favicon.ico" />
-                                </Form.Item>
-
-                                <Form.Item label="网站链接" name="url" rules={[{ required: true, message: '网站链接不能为空' }, { validator: validateURL }]}>
-                                    <Input placeholder="https://long2025.top/" />
-                                </Form.Item>
-
-                                <Form.Item label="订阅地址" name="rss" rules={[{ validator: validateURL }]}>
-                                    <Input placeholder="https://long2025.top/api/rss" />
-                                </Form.Item>
-
-                                <Form.Item name="typeId" label="网站类型" rules={[{ required: true, message: '网站类型不能为空' }]}>
-                                    <Select placeholder="请选择网站类型" allowClear>
-                                        {typeList.map(item => <Option key={item.id} value={item.id}>{item.name}</Option>)}
-                                    </Select>
-                                </Form.Item>
-
-                                <Form.Item label="顺序" name="order">
-                                    <Input placeholder="请输入网站顺序（值越小越靠前）" />
-                                </Form.Item>
-
-                                <Form.Item>
-                                    <Button type="primary" htmlType="submit" loading={btnLoading} className='w-full'>{isMethod === "edit" ? '编辑网站' : '新增网站'}</Button>
-                                </Form.Item>
-                            </Form>
-                        </div>
-                    </Spin>
-                </div>
-            ),
-        },
-    ];
-
-    return (
-        <div>
-            <Title value="网站管理" />
-
-            <Card className="WebPage mt-2 min-h-[calc(100vh-160px)]">
-                <Tabs activeKey={tab} tabPosition="top" onChange={handleTabChange} items={tabItems} />
-            </Card>
-        </div>
-=======
         acc[groupName].push(item);
         return acc;
       },
       {} as { [key: string]: Web[] },
->>>>>>> e8a6380 (引入 Eslint，提高项目代码规范)
     );
 
     setList(grouped);
@@ -387,7 +244,7 @@ export default () => {
             <div className="w-full md:w-[500px] mx-auto">
               <Form form={form} layout="vertical" size="large" initialValues={link} onFinish={onSubmit}>
                 <Form.Item label="网站标题" name="title" rules={[{ required: true, message: '网站标题不能为空' }]}>
-                  <Input placeholder="ThriveX" />
+                  <Input placeholder="龙氏ThriveX" />
                 </Form.Item>
 
                 <Form.Item

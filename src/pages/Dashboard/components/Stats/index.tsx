@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import { useEffect, useState } from "react"
-import { Spin } from 'antd';
-import VisitorsStatisChat from "./components/VisitorsStatisChat"
-=======
 import { useEffect, useState } from 'react'
 import { Spin } from 'antd';
 import VisitorsStatisChat from './components/VisitorsStatisChat'
->>>>>>> e8a6380 (引入 Eslint，提高项目代码规范)
 import NewOldVisitors from './components/NewOldVisitors'
 import CardDataStats from '@/components/CardDataStats'
 

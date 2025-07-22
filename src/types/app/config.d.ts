@@ -22,6 +22,7 @@ export interface Web {
     keyword: string,
     footer: string,
     icp?: string,
+    publicSecurityRecord?: string,
     create_time?: number
 }
 

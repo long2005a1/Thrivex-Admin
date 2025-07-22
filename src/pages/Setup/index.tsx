@@ -25,13 +25,8 @@ export default () => {
     
     const list: Setup[] = [
         {
-<<<<<<< HEAD
-            title: "账户设置",
-            description: "配置管理员账号、密码等",
-=======
             title: '账户配置',
             description: '配置管理员账号、密码等',
->>>>>>> e8a6380 (引入 Eslint，提高项目代码规范)
             icon: <BiShieldQuarter className={iconSty} />,
             key: 'system'
         },

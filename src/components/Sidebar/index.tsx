@@ -339,18 +339,12 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
     >
       {/* Logo 和标题区域 */}
       <div className="flex justify-center items-center gap-2 px-6 py-5.5 pb-0 lg:pt-6">
-<<<<<<< HEAD
-        <NavLink to="/" className={`flex items-center ${isSideBarTheme === "dark" ? "font-bold text-white" : "text-[#555] dark:text-white"}`}>
-          <img src={logo} alt="logo" className='w-8 mr-2.5' />
-          <div>龙氏Thrive X 🎉</div>
-=======
         <NavLink
           to="/"
           className={`flex items-center ${isSideBarTheme === 'dark' ? 'font-bold text-white' : 'text-[#555] dark:text-white'}`}
         >
           <img src={logo} alt="logo" className="w-8 mr-2.5" />
-          <div>Thrive X</div>
->>>>>>> e8a6380 (引入 Eslint，提高项目代码规范)
+          <div>龙氏Thrive X</div>
         </NavLink>
 
         {/* 移动端侧边栏触发器按钮 */}

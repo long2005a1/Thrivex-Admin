@@ -1,10 +1,10 @@
 <p align="center">
     <a href="https://long2025.top" target="_blank">
-        <img width="100" src="https://long2024.cn/image/logo.png" alt="ThriveX logo" style="width:100px" />
+        <img width="100" src="https://long2024.cn/image/logo.png" alt="龙氏ThriveX logo" style="width:100px" />
     </a>
 </p>
 
-<p align="center" style="font-size:20px; font-weight:700;">ThriveX</p>
+<p align="center" style="font-size:20px; font-weight:700;">龙氏ThriveX</p>
 
 <p align="center" style="margin-bottom:10px">年轻、高颜值、全开源、永不收费的现代化博客管理系统</p>
 
