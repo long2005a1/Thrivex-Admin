@@ -11,7 +11,7 @@ const HeaderInfo = () => {
     <div className="flex justify-between items-center xs:px-6 container mx-auto">
       <div className="flex items-center">
         {/* 头像 */}
-        <img src={user?.avatar || 'https://q1.qlogo.cn/g?b=qq&nk=3311118881&s=640'} alt="avatar" className="w-16 xs:w-24 h-16 xs:h-24 rounded-full mr-4 transition-transform duration-300 transform hover:scale-125 avatar-animation" />
+        <img src={user?.avatar || 'https://q1.qlogo.cn/g?b=qq&nk=2190008995&s=640'} alt="avatar" className="w-16 xs:w-24 h-16 xs:h-24 rounded-full mr-4 transition-transform duration-300 transform hover:scale-125 avatar-animation" />
 
         {/* 信息 */}
         <div className="info">
