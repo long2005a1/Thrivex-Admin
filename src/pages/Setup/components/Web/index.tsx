@@ -51,40 +51,22 @@ export default () => {
     <div>
       <h2 className="text-xl pb-4 pl-10">网站配置</h2>
 
-            <Form
-                form={form}
-                size="large"
-                layout="vertical"
-                onFinish={onSubmit}
-                initialValues={initialValues}
-                className="w-full lg:w-[500px] md:ml-10"
-            >
-                <Form.Item
-                    label="网站名称"
-                    name="title"
-                    rules={[{ required: true, message: '网站名称不能为空' }]}
-                >
-                    <Input placeholder="龙氏ThriveX" />
-                </Form.Item>
-
-        <Form.Item label="网站副标题" name="subhead" rules={[{ required: true, message: '网站副标题不能为空' }]}>
-          <Input placeholder="花有重开日, 人无再少年" />
+      <Form form={form} size="large" layout="vertical" onFinish={onSubmit} initialValues={initialValues} className="w-full lg:w-[500px] md:ml-10">
+        <Form.Item label="网站名称" name="title" rules={[{ required: true, message: '网站名称不能为空' }]}>
+          <Input placeholder="龙氏ThriveX" />
         </Form.Item>
 
-                <Form.Item
-                    label="网站链接"
-                    name="url"
-                    rules={[{ required: true, message: '网站链接不能为空' }]}
-                >
-                    <Input placeholder="https://long2025.top/" />
-                </Form.Item>
+        <Form.Item label="网站副标题" name="subhead" rules={[{ required: true, message: '网站副标题不能为空' }]}>
+          <Input placeholder="现代化博客管理系统" />
+        </Form.Item>
 
-                <Form.Item
-                    label="网站图标"
-                    name="favicon"
-                >
-                    <Input placeholder="https://long2025.top/favicon.ico" />
-                </Form.Item>
+        <Form.Item label="网站链接" name="url" rules={[{ required: true, message: '网站链接不能为空' }]}>
+          <Input placeholder="https://long2025.top/" />
+        </Form.Item>
+
+        <Form.Item label="网站图标" name="favicon">
+          <Input placeholder="https://long2025.top/favicon.ico" />
+        </Form.Item>
 
         <Form.Item label="网站描述" name="description" rules={[{ required: true, message: '网站描述不能为空' }]}>
           <Input placeholder="也许会是最好用的博客管理系统" />
@@ -98,9 +80,13 @@ export default () => {
           <Input placeholder="记录前端、Python、Java点点滴滴" />
         </Form.Item>
 
-                <Form.Item label="ICP 备案号" name="icp">
-                    <Input placeholder="豫ICP备2020031040号-1" />
-                </Form.Item>
+        <Form.Item label="ICP 备案号" name="icp">
+          <Input placeholder="湘ICP备2024052782号-2" />
+        </Form.Item>
+
+        <Form.Item label="公网备案号" name="publicSecurityRecord">
+          <Input placeholder="湘公网安备43020002000115号" />
+        </Form.Item>
 
         <Form.Item label="网站创建时间" name="create_time">
           <DatePicker className="w-full" />
