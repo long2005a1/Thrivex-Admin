@@ -55,6 +55,7 @@ export type EnvConfigName = 'baidu_statis' | 'email' | 'gaode_map' | 'gaode_coor
 export interface Config {
     id: string,
     name: string,
-    value: any,
+    // value: string,
+    value: object,
     notes: string
 }
